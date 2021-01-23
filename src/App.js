@@ -20,22 +20,21 @@ class App extends Component {
       todos: todosfinale
     })
   }
-  addtodo = (e) =>{
-    e.preventDefault();
-    console.log(e.target.value);
-    // console.log('todo added');
+  Addtodo =(newtodo)=>{
+    newtodo.id = Math.random() *100;
+    let finaletodo = [...this.state.todos, newtodo]
+    this.setState({
+      todos : finaletodo
+    })
+
   }
-  Senddata =()=>{
-    let todos = [...this.state.todos
-    ]
-    // console.log(todos);
-  }
+ 
  render(){
     return (
     <div className="App container py">
       <h1 className="center blue-text">Todos</h1>
       <Todos todos = {this.state.todos} deletetodo = {this.getid}/>
-      <Form addtodo = {this.addtodo} Senddata = {this.Senddata}/>
+      <Form Addtodo = {this.Addtodo}/>
     </div>
   );
  }
