@@ -1,24 +1,27 @@
-import {Link, NavLink} from 'react-router-dom'
-let Navbar = () => {
+import { Link, NavLink, withRouter } from "react-router-dom";
+let Navbar = (props) => {
+  // setTimeout(() => {
+  //   props.history.push('contact')
+  // }, 5000);
   return (
     <div>
       <nav className="nav-extended">
         <div className="nav-wrapper">
-          <NavLink to ='/' className="brand-logo">
+          <NavLink to="/" className="brand-logo">
             Logo
           </NavLink>
-          <NavLink to ="/" data-target="mobile-demo" className="sidenav-trigger">
+          <NavLink to="/" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">Home</i>
           </NavLink>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <NavLink to ="/">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/About">About</NavLink>
             </li>
             <li>
-              <NavLink to ="/Contact">contact</NavLink>
+              <NavLink to="/Contact">contact</NavLink>
             </li>
             <li>
               <Link to="collapsible.html">JavaScript</Link>
@@ -41,4 +44,4 @@ let Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default withRouter(Navbar);
