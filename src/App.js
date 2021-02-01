@@ -9,6 +9,8 @@ import Home from './components/home'
 import About from './components/about'
 import Contact from './components/contact'
 import Footer from './components/footer'
+import pnf from "./components/404"
+
 
 class App extends Component {
   state = {
@@ -42,6 +44,7 @@ class App extends Component {
           <Route exact path ='/' component={Home}/>
           <Route path ='/about' component={About}/>
           <Route path ='/contact' component={Contact}/>
+          <Route path ='/pnf' component={pnf}/>
           {/* <div className="App container py">
             <h1 className="center blue-text">Todos</h1>
             <Todos todos={this.state.todos} deletetodo={this.getid} />

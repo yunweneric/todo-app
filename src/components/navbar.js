@@ -24,7 +24,7 @@ let Navbar = (props) => {
               <NavLink to="/Contact">contact</NavLink>
             </li>
             <li>
-              <Link to="collapsible.html">JavaScript</Link>
+              <Link to="/pnf">404</Link>
             </li>
           </ul>
         </div>
@@ -38,7 +38,7 @@ let Navbar = (props) => {
           <a href="/about">Components</a>
         </li>
         <li>
-          <a href="/about">JavaScript</a>
+          <a href="/pnf">JavaScript</a>
         </li>
       </ul>
     </div>
