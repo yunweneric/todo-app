@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 import "./App.css";
 import { Component } from "react";
-import Todos from "./Todos";
-import Form from "./form";
+// import Todos from "./Todos";
+// import Form from "./form";
 import Navbar from "./components/navbar";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from './components/home'
 import About from './components/about'
 import Contact from './components/contact'
+import Footer from './components/footer'
 
 class App extends Component {
   state = {
@@ -41,11 +42,12 @@ class App extends Component {
           <Route exact path ='/' component={Home}/>
           <Route path ='/about' component={About}/>
           <Route path ='/contact' component={Contact}/>
-          <div className="App container py">
+          {/* <div className="App container py">
             <h1 className="center blue-text">Todos</h1>
             <Todos todos={this.state.todos} deletetodo={this.getid} />
             <Form Addtodo={this.Addtodo} />
-          </div>
+          </div> */}
+          <Footer className = 'footer'/>
         </div>
       </BrowserRouter>
     );

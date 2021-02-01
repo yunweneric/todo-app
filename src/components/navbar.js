@@ -1,44 +1,30 @@
-let Navbar = () => {
+import { Link, NavLink, withRouter } from "react-router-dom";
+let Navbar = (props) => {
+  // setTimeout(() => {
+  //   props.history.push('contact')
+  // }, 5000);
   return (
     <div>
       <nav className="nav-extended">
         <div className="nav-wrapper">
-          <a href="/" className="brand-logo">
+          <NavLink to="/" className="brand-logo">
             Logo
-          </a>
-          <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+          </NavLink>
+          <NavLink to="/" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">Home</i>
-          </a>
+          </NavLink>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <a href="/">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="/About">About</a>
+              <NavLink to="/About">About</NavLink>
             </li>
             <li>
-              <a href="/Contact">/contact</a>
+              <NavLink to="/Contact">contact</NavLink>
             </li>
             <li>
-              <a href="collapsible.html">JavaScript</a>
-            </li>
-          </ul>
-        </div>
-        <div className="nav-content">
-          <ul className="tabs tabs-transparent">
-            <li className="tab">
-              <a href="/about">Test 1</a>
-            </li>
-            <li className="tab">
-              <a href="/about" className="active">
-                Test 2
-              </a>
-            </li>
-            <li className="tab disabled">
-              <a href="/about">Disabled Tab</a>
-            </li>
-            <li className="tab">
-              <a href="/about">Test 4</a>
+              <Link to="collapsible.html">JavaScript</Link>
             </li>
           </ul>
         </div>
@@ -58,4 +44,4 @@ let Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default withRouter(Navbar);
